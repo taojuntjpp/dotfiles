@@ -1,0 +1,66 @@
+syntax on			"高亮
+set nocompatible	"不要vim模仿vi模式，建议设置，否则会有很多不兼容的问题
+
+filetype indent plugin on "根据文件类型进行缩进
+
+set noexpandtab		"不把tab转换为空格
+set shiftwidth=4	"左移或者右移时 缩进的列数
+set tabstop=4		"一个tab所占列数
+set softtabstop=4	"一个tab所占列数
+set smarttab		"智能制表符
+set smartindent
+set nowrap			"关闭自动换行
+set foldmethod=syntax "代码折叠
+set helplang=cn			"帮助系统设为中文
+
+"状态栏 行号和标尺
+set laststatus=2 "始终显示状态栏
+set ruler		"显示位置指示器
+"set rulerformat=%15(%c%F\ %p%%%)
+
+set showmatch	"显示匹配的括号
+set showcmd		"显示目前执行的命令
+set autoread	"文件在vim外修改，自动重新载入
+set fileencodings=utf-8,gbk		"使用utf-8或gbk打开文件
+
+"行控制
+set linebreak "英文单词在换行时不被截断
+"set textwidth=80	"每行80字符自动换行，加上换行符
+
+"标签
+set tabpagemax=15	"最多15个标签
+set showtabline=2	"总是显示标签栏
+
+"conf for tabs
+let mapleader = ','
+nnoremap <C-l> gt
+nnoremap <C-h> gT
+nnoremap <leader>t : tabe<CR>
+
+" virtual tabstops using spaces
+"let my_tab=4
+"execute "set shiftwidth=".my_tab
+"execute "set softtabstop=".my_tab
+"set noexpandtab
+""allow toggling between local and default mode
+"function! TabToggle()
+"    if &expandtab
+"		set shiftwidth=8
+"	set softtabstop=0
+"               	set noexpandtab
+"        else
+"                execute "set shiftwidth=".g:my_tab
+"                execute "set softtabstop=".g:my_tab
+"	set expandtab
+"endif
+"endfunction
+"nmap <F9> mz:execute TabToggle()<CR>'z
+
+set cursorline		"显示当前行 下划线
+
+set hlsearch		"搜索关键字高亮
+set incsearch		"输入要搜索的关键字，实时匹配
+
+set number			"显示行号 set number
+set listchars=tab:>-,trail:·
+set list			"显示tab等符号
